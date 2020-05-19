@@ -1,0 +1,12 @@
+
+.ecosystem {
+  font-size: 0.7em;
+}
+
+.ecosystem__link {
+  color: #fff;
+}
+
+.ecosystem td {
+  white-space: nowrap;
+}

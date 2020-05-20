@@ -2,3 +2,7 @@
 .code {
   box-shadow: none;
 }
+
+.lang-html {
+  padding-left: 10px !important;
+}

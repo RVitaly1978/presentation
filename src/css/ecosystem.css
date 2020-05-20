@@ -4,7 +4,7 @@
 }
 
 .ecosystem__link {
-  color: #fff;
+  color: var(--dark-background);
 }
 
 .ecosystem td {

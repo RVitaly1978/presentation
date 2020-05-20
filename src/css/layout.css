@@ -1,0 +1,10 @@
+
+.flex-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.flex-col-2 {
+  max-width: 45%;
+}

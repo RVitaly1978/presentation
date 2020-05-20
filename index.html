@@ -1,415 +1,546 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+	<title>Vue-presentation</title>
 
-		<link rel="stylesheet" href="css/reset.css">
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
-		<link rel="stylesheet" href="src/css/styles.css">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/black.css">
+	<link rel="stylesheet" href="src/css/styles.css">
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/monokai.css">
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/monokai.css">
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement( 'link' );
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName( 'head' )[0].appendChild( link );
+	</script>
+</head>
 
-				<section data-background-color="#ffffff">
-					<div class="vue-logo">
-							<svg class="vue-logo__svg" width="256px" height="221px" viewBox="0 0 256 221" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid">
-									<g>
-											<path d="M204.8,0 L256,0 L128,220.8 L0,0 L50.56,0 L97.92,0 L128,51.2 L157.44,0 L204.8,0 Z" fill="#41B883"></path>
-											<path d="M0,0 L128,220.8 L256,0 L204.8,0 L128,132.48 L50.56,0 L0,0 Z" fill="#41B883"></path>
-											<path d="M50.56,0 L128,133.12 L204.8,0 L157.44,0 L128,51.2 L97.92,0 L50.56,0 Z" fill="#35495E"></path>
-									</g>
-							</svg>
-							<h3 class="vue-logo__title">Vue.JS</h3>
+<body>
+	<div class="reveal">
+		<div class="slides">
+
+			<section data-background-color="#ffffff">
+				<div class="vue-logo">
+						<svg class="vue-logo__svg" width="256px" height="221px" viewBox="0 0 256 221" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid">
+								<g>
+										<path d="M204.8,0 L256,0 L128,220.8 L0,0 L50.56,0 L97.92,0 L128,51.2 L157.44,0 L204.8,0 Z" fill="#41B883"></path>
+										<path d="M0,0 L128,220.8 L256,0 L204.8,0 L128,132.48 L50.56,0 L0,0 Z" fill="#41B883"></path>
+										<path d="M50.56,0 L128,133.12 L204.8,0 L157.44,0 L128,51.2 L97.92,0 L50.56,0 Z" fill="#35495E"></path>
+								</g>
+						</svg>
+						<h3 class="vue-logo__title">Vue.JS</h3>
+				</div>
+			</section>
+
+			<section>
+				<div class="block-user-info">
+					<img class="user-info__photo" src="src/images/photo-evan-you.jpeg" alt="Evan You">
+					<div class="user-info__name">
+						Evan You
 					</div>
-				</section>
-
-				<section>
-					<div class="block-user-info">
-						<img class="user-info__photo" src="src/images/photo-evan-you.jpeg" alt="Evan You">
-						<div class="user-info__name">
-							Evan You
-						</div>
-						<div class="user-info__position">Creator <a href="https://vuejs.org/" target="_blank">@Vue.js</a></div>
-						<div class="user-info__position">Core Dev at Meteor</div>
-						<div class="user-info__position">Previously worked as a Creative Technologist at Google</div>
-						<div class="user-info__position">From 2016 working full-time on Vue.JS framework</div>
-						<div class="user-info__social">
-							<a href="https://twitter.com/youyuxi" target="_blank" class="twitter">Twitter</a>
-							<a href="https://github.com/yyx990803/" target="_blank" class="github">Github</a>
-						</div>
+					<ul>
+						<li class="user-info__position">Creator <a href="https://vuejs.org/" target="_blank">Vue.js</a></li>
+						<li class="user-info__position">Core Dev at Meteor</li>
+						<li class="user-info__position">Previously worked as a Creative Technologist at Google</li>
+						<li class="user-info__position">From 2016 working full-time on Vue.JS framework</li>
+					</ul>
+					<div class="user-info__social">
+						<a href="https://twitter.com/youyuxi" target="_blank" class="twitter">Twitter</a>
+						<a href="https://github.com/yyx990803/" target="_blank" class="github">Github</a>
 					</div>
-				</section>
+				</div>
+			</section>
 
-				<section>
-					<div class="history">
-						<h2>History</h2>
-						<ul>
-							<li class="fragment">Started in late 2013</li>
-							<li class="fragment">Initial release Feb. 2014 (v0.6)</li>
-							<li class="fragment">Latest stable release v2.6.11</li>
-						</ul>
-					</div>
-				</section>
+			<section data-background-color="#ffffff">
+				<div class="history">
+					<h2>History</h2>
+					<ul>
+						<li class="fragment">Started in late 2013</li>
+						<li class="fragment">Initial release Feb. 2014 (v0.6)</li>
+						<li class="fragment">Latest stable release v2.6.11</li>
+					</ul>
+				</div>
+			</section>
 
+			<section data-background-color="#ffffff">
 				<section>
-					<section>
-						<h2>Advantages</h2>
-						<ul>
-							<li>Very Small Size</li>
-							<li>Easy to Understand <br>and Develop Applications</li>
-							<li>Simple Integration</li>
-							<li>Detailed Documentation</li>
-							<li>Flexibility</li>
-							<li>Right to choose</li>
-						</ul>
-					</section>
-					<section>
-						<h2>Information</h2>
-						<ul>
-							<li>Progressive framework</li>
-							<li>Component oriented</li>
-							<li>Mix the best of React and Angular</li>
-						</ul>
-					</section>
-					<section>
-						<h2>Very Small Size</h2>
-						<table>
-							<tr>
-								<th>Name</th>
-								<th>Size</th>
-							</tr>
-							<tr>
-								<td>React + react-dom</td>
-								<td>34.4 kB (gzipped)</td>
-							</tr>
-							<tr>
-								<td>Angular</td>
-								<td>62.2 kB (gzipped)</td>
-							</tr>
-							<tr>
-								<td>Vue.js</td>
-								<td>33.3 kB (gzipped)</td>
-							</tr>
-							<tr>
-								<td>jquery</td>
-								<td>31.1 kB (gzipped)</td>
-							</tr>
-						</table>
-					</section>
-					<section>
-						<h2>Simple Integration</h2>
-						<ul>
-							<li>tag script (Vue.js runtime)</li>
-							<li>webpack</li>
-							<li>web components</li>
-							<li>browserify</li>
-							<li>requirejs</li>
-						</ul>
-					</section>
-					<section data-background-color="#ffffff">
-							<h2>Detailed Documentation</h2>
-							<img src="src/images/doc.png" alt="documentation">
-					</section>
-					<section>
-						<h2>Flexibility</h2>
-						<ul>
-							<li>Write your template in an HTML file</li>
-							<li>Write your template in a string in a Javascript file</li>
-							<li>Use JSX in a Javascript file</li>
-							<li>Make your template in pure Javascript using virtual nodes</li>
-						</ul>
-						<p class="fragment">
-							This flexibility makes it easy to switch to Vue because React developers,
-							Angular developers, or developers new to JS frameworks would all find Vue’s design familiar
-						</p>
-					</section>
-					<section>
-						<h2>Right to choose</h2>
-						<ul>
-							<li>
-								Template
-								<ul>
-									<li>html binding</li>
-									<li>jsx</li>
-									<li>jade</li>
-								</ul>
-							</li>
-							<li>
-								Component class
-								<ul>
-									<li>es5</li>
-									<li>es6 / es7</li>
-									<li>es6 + flow</li>
-									<li>TypeScript</li>
-								</ul>
-							</li>
-						</ul>
-					</section>
+					<h2>Advantages</h2>
+					<ul>
+						<li>Very Small Size</li>
+						<li>Easy to Understand <br>and Develop Applications</li>
+						<li>Simple Integration</li>
+						<li>Detailed Documentation</li>
+						<li>Flexibility</li>
+						<li>Right to choose</li>
+					</ul>
 				</section>
-
 				<section>
-					<h2>Ecosystem</h2>
-					<table class="ecosystem">
+					<h2>Information</h2>
+					<ul>
+						<li>Progressive framework</li>
+						<li>Component oriented</li>
+						<li>Mix the best of React and Angular</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Very Small Size</h2>
+					<table>
 						<tr>
-							<th>Project</th>
-							<th>Description</th>
+							<th>Name</th>
+							<th>Size</th>
 						</tr>
 						<tr>
-							<td><a class="ecosystem__link" href="https://github.com/vuejs/vue-router">vue-router</a></td>
-							<td>Single-page application routing</td>
+							<td>React + react-dom</td>
+							<td>34.4 kB (gzipped)</td>
 						</tr>
 						<tr>
-							<td><a class="ecosystem__link" href="https://github.com/vuejs/vuex">vuex</a></td>
-							<td>Large-scale state management</td>
+							<td>Angular</td>
+							<td>62.2 kB (gzipped)</td>
 						</tr>
 						<tr>
-							<td><a class="ecosystem__link" href="https://github.com/vuejs/vue-cli">vue-cli</a></td>
-							<td>Project scaffolding</td>
+							<td>Vue.js</td>
+							<td>33.3 kB (gzipped)</td>
 						</tr>
 						<tr>
-							<td><a class="ecosystem__link" href="https://github.com/vuejs/vue-loader">vue-loader</a></td>
-							<td>Single File Component (<code>*.vue</code> file) loader for webpack</td>
-						</tr>
-						<tr>
-							<td><a class="ecosystem__link" href="https://github.com/vuejs/vue/tree/dev/packages/vue-server-renderer">vue-server-renderer</a></td>
-							<td>Server-side rendering support</td>
-						</tr>
-						<tr>
-							<td><a class="ecosystem__link" href="https://github.com/vuejs/vue-class-component">vue-class-component</a></td>
-							<td>TypeScript decorator for a class-based API</td>
-						</tr>
-						<tr>
-							<td><a class="ecosystem__link" href="https://github.com/vuejs/vue-rx">vue-rx</a></td>
-							<td>RxJS integration</td>
-						</tr>
-						<tr>
-							<td><a class="ecosystem__link" href="https://github.com/vuejs/vue-devtools">vue-devtools</a></td>
-							<td>Browser DevTools extension</td>
+							<td>jquery</td>
+							<td>31.1 kB (gzipped)</td>
 						</tr>
 					</table>
 				</section>
-
 				<section>
-					<section>
-						<h2>How it works?</h2>
-					</section>
-					<section data-background-color="#ffffff">
-						<img src="src/images/MVVM.png" alt="MVVM">
-					</section>
-					<section data-background-color="#ffffff">
-						<h2>Components</h2>
-						<img src="src/images/components.png" alt="components">
-					</section>
-					<section data-background-color="#ffffff">
-						<h2>Lifecycle</h2>
-						<img src="src/images/lifecycle.png" alt="lifecycle">
-					</section>
-					<section data-background-color="#ffffff">
-						<h2>Reactivity</h2>
-						<img src="src/images/reactivity.png" alt="reactivity">
-					</section>
+					<h2>Simple Integration</h2>
+					<ul>
+						<li>tag script (Vue.js runtime)</li>
+						<li>webpack</li>
+						<li>web components</li>
+						<li>browserify</li>
+						<li>requirejs</li>
+					</ul>
 				</section>
-
 				<section>
-					<section>
-						<h2>Interpolations</h2>
-					</section>
-					<section data-background-color="#ffffff">
-						<h2>Text</h2>
-						<pre class="code"><code class="lang-html">
+						<h2>Detailed Documentation</h2>
+						<img src="src/images/doc.png" alt="documentation">
+				</section>
+				<section>
+					<h2>Flexibility</h2>
+					<ul>
+						<li>Write your template in an HTML file</li>
+						<li>Write your template in a string in a Javascript file</li>
+						<li>Use JSX in a Javascript file</li>
+						<li>Make your template in pure Javascript using virtual nodes</li>
+					</ul>
+					<p class="fragment">
+						This flexibility makes it easy to switch to Vue because React developers,
+						Angular developers, or developers new to JS frameworks would all find Vue’s design familiar
+					</p>
+				</section>
+				<section>
+					<h2>Right to choose</h2>
+					<ul>
+						<li>
+							Template
+							<ul>
+								<li>html binding</li>
+								<li>jsx</li>
+								<li>jade</li>
+							</ul>
+						</li>
+						<li>
+							Component class
+							<ul>
+								<li>es5</li>
+								<li>es6 / es7</li>
+								<li>es6 + flow</li>
+								<li>TypeScript</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+			</section>
+
+			<section data-background-color="#ffffff">
+				<h2>Ecosystem</h2>
+				<table class="ecosystem">
+					<tr>
+						<th>Project</th>
+						<th>Description</th>
+					</tr>
+					<tr>
+						<td><a class="ecosystem__link" href="https://github.com/vuejs/vue-router">vue-router</a></td>
+						<td>Single-page application routing</td>
+					</tr>
+					<tr>
+						<td><a class="ecosystem__link" href="https://github.com/vuejs/vuex">vuex</a></td>
+						<td>Large-scale state management</td>
+					</tr>
+					<tr>
+						<td><a class="ecosystem__link" href="https://github.com/vuejs/vue-cli">vue-cli</a></td>
+						<td>Project scaffolding</td>
+					</tr>
+					<tr>
+						<td><a class="ecosystem__link" href="https://github.com/vuejs/vue-loader">vue-loader</a></td>
+						<td>Single File Component (<code>*.vue</code> file) loader for webpack</td>
+					</tr>
+					<tr>
+						<td><a class="ecosystem__link" href="https://github.com/vuejs/vue/tree/dev/packages/vue-server-renderer">vue-server-renderer</a></td>
+						<td>Server-side rendering support</td>
+					</tr>
+					<tr>
+						<td><a class="ecosystem__link" href="https://github.com/vuejs/vue-class-component">vue-class-component</a></td>
+						<td>TypeScript decorator for a class-based API</td>
+					</tr>
+					<tr>
+						<td><a class="ecosystem__link" href="https://github.com/vuejs/vue-rx">vue-rx</a></td>
+						<td>RxJS integration</td>
+					</tr>
+					<tr>
+						<td><a class="ecosystem__link" href="https://github.com/vuejs/vue-devtools">vue-devtools</a></td>
+						<td>Browser DevTools extension</td>
+					</tr>
+				</table>
+			</section>
+
+			<section data-background-color="#ffffff">
+				<section>
+					<h2>How it works?</h2>
+				</section>
+				<section data-background-color="#ffffff">
+					<img src="src/images/MVVM.png" alt="MVVM">
+				</section>
+				<section data-background-color="#ffffff">
+					<h2>Components</h2>
+					<img src="src/images/components.png" alt="components">
+				</section>
+				<section data-background-color="#ffffff">
+					<h2>Lifecycle</h2>
+					<img src="src/images/lifecycle.png" alt="lifecycle">
+				</section>
+				<section data-background-color="#ffffff">
+					<h2>Reactivity</h2>
+					<img src="src/images/reactivity.png" alt="reactivity">
+				</section>
+			</section>
+
+			<section data-background-color="#ffffff">
+				<section>
+					<h2>Interpolations</h2>
+				</section>
+				<section data-background-color="#ffffff">
+					<h2>Text</h2>
+					<pre class="code"><code class="lang-html">
 &lt;span&gt;Message: {{ msg }}&lt;/span&gt;
 &lt;span v-once&gt;This will never change: {{ msg }}&lt;/span&gt;
-						</code></pre>
-					</section>
-					<section data-background-color="#ffffff">
-						<h2>Raw HTML</h2>
-						<pre class="code"><code class="lang-html">
+					</code></pre>
+				</section>
+				<section data-background-color="#ffffff">
+					<h2>Raw HTML</h2>
+					<pre class="code"><code class="lang-html">
 &lt;p&gt;Using mustaches: {{ rawHtml }}&lt;/p&gt;
 &lt;p&gt;Using v-html directive: &lt;span v-html="rawHtml"&gt;&lt;/span&gt;&lt;/p&gt;
-						</code></pre>
-					</section>
-					<section data-background-color="#ffffff">
-						<h2>Attributes</h2>
-						<pre class="code"><code class="lang-html">
+					</code></pre>
+				</section>
+				<section data-background-color="#ffffff">
+					<h2>Attributes</h2>
+					<pre class="code"><code class="lang-html">
 &lt;div v-bind:id="dynamicId"&gt;&lt;/div&gt;
 &lt;button v-bind:disabled="isButtonDisabled"&gt;Button&lt;/button&gt;
-						</code></pre>
-					</section>
-					<section data-background-color="#ffffff">
-						<h2>Using JavaScript Expressions</h2>
-						<pre class="code"><code class="lang-html">
+					</code></pre>
+				</section>
+				<section data-background-color="#ffffff">
+					<h2>Using JavaScript Expressions</h2>
+					<pre class="code"><code class="lang-html">
 {{ number + 1 }}
 {{ ok ? 'YES' : 'NO' }}
 {{ message.split('').reverse().join('') }}
 &lt;div v-bind:id="'list-' + id"&gt;&lt;/div&gt;
-						</code></pre>
-					</section>
-				</section>
-
-				<section data-background-color="#ffffff">
-					<h2>Directives</h2>
-					<div class="row">
-						<div class="col-md-6">
-							<h5>v-bind</h5>
-							<pre class="code"><code class="lang-html">
-&lt;!-- full syntax --&gt;
-&lt;a v-bind:href="url"&gt;&lt;/a&gt;
-&lt;!-- shorthand --&gt;
-&lt;a :href="url"&gt;&lt;/a&gt;
-							</code></pre>
-						</div>
-						<div class="col-md-6">
-							<h5>v-on</h5>
-							<pre class="code"><code class="lang-html">
-&lt;!-- full syntax --&gt;
-&lt;a v-on:click="doMethod"&gt;&lt;/a&gt;
-&lt;!-- shorthand --&gt;
-&lt;a @click="doMethod"&gt;&lt;/a&gt;
-							</code></pre>
-						</div>
-					</div>
-					<h5>Modifiers</h5>
-					<pre class="code"><code class="lang-html">
-&lt;form v-on:submit.prevent="onSubmit"&gt; ... &lt;/form&gt;
 					</code></pre>
 				</section>
+			</section>
 
+			<section data-background-color="#ffffff">
 				<section>
-					<section>
-						<h2>Computed Properties and Watchers</h2>
-					</section>
-					<section data-background-color="#ffffff">
-						<h2>Watch</h2>
-						<pre class="code"><code class="lang-javascript">
-var vm = new Vue({
-el: '#demo',
-data: {
-firstName: 'Foo',
-lastName: 'Bar',
-fullName: 'Foo Bar'
-},
-watch: {
-firstName: function (val) {
-	this.fullName = val + ' ' + this.lastName
-},
-lastName: function (val) {
-	this.fullName = this.firstName + ' ' + val
-}
-}
-})
-						</code></pre>
-					</section>
-					<section data-background-color="#ffffff">
-						<h2>Computed</h2>
-						<pre class="code"><code class="lang-html">
-&lt;div id="demo"&gt;{{ fullName }}&lt;/div&gt;
-						</code></pre>
-						<pre class="code"><code class="lang-javascript">
-var vm = new Vue({
-el: '#demo',
-data: {
-firstName: 'Foo',
-lastName: 'Bar'
-},
-computed: {
-fullName: function () {
-	return this.firstName + ' ' + this.lastName
-}
-}
-})
-						</code></pre>
-					</section>
-					<section data-background-color="#ffffff">
-						<h2>Computed Setter</h2>
-						<pre class="code"><code class="lang-javascript">
-//...
-computed: {
-fullName: {
-// getter
-get: function () {
-	return this.firstName + ' ' + this.lastName
-},
-// setter
-set: function (newValue) {
-	var names = newValue.split(' ')
-	this.firstName = names[0]
-	this.lastName = names[names.length - 1]
-}
-}
-}
-//...
-						</code></pre>
-					</section>
+					<h2>Directives</h2>
 				</section>
+				<section>
+					<h5>v-bind</h5>
+					<pre class="code"><code class="lang-html">
+	&lt;!-- full syntax --&gt;
+	&lt;a v-bind:href="url"&gt;&lt;/a&gt;
+	&lt;!-- shorthand --&gt;
+	&lt;a :href="url"&gt;&lt;/a&gt;
+					</code></pre>
+				</section>
+				<section>
+					<h5>v-on</h5>
+					<pre class="code"><code class="lang-html">
+	&lt;!-- full syntax --&gt;
+	&lt;a v-on:click="doMethod"&gt;&lt;/a&gt;
+	&lt;!-- shorthand --&gt;
+	&lt;a @click="doMethod"&gt;&lt;/a&gt;
+					</code></pre>
+				</section>
+				<section>
+					<h5>Modifiers</h5>
+					<pre class="code"><code class="lang-html">
+	&lt;form v-on:submit.prevent="onSubmit"&gt; ... &lt;/form&gt;
+					</code></pre>
+				</section>
+			</section>
 
+			<section data-background-color="#ffffff">
+				<section>
+					<h2>Computed <br>Properties <br>and Watchers</h2>
+				</section>
 				<section data-background-color="#ffffff">
-					<h2>Binding HTML Classes</h2>
-					<div class="row">
-						<div class="col-md-6">
-							<pre class="code"><code class="lang-html">
+					<h2>Watch</h2>
+					<pre class="code"><code class="lang-javascript">
+const vm = new Vue({
+  el: '#demo',
+  data: {
+    firstName: 'Foo',
+    lastName: 'Bar',
+    fullName: 'Foo Bar'
+  },
+  watch: {
+    firstName: function (val) {
+      this.fullName = val + ' ' + this.lastName
+    },
+    lastName: function (val) {
+      this.fullName = this.firstName + ' ' + val
+    }
+  }
+})
+					</code></pre>
+				</section>
+				<section data-background-color="#ffffff">
+					<h2>Computed</h2>
+					<pre class="code"><code class="lang-html">
+&lt;div id="demo"&gt;{{ fullName }}&lt;/div&gt;
+					</code></pre>
+					<pre class="code"><code class="lang-javascript">
+const vm = new Vue({
+  el: '#demo',
+  data: {
+    firstName: 'Foo',
+    lastName: 'Bar'
+  },
+  computed: {
+    fullName: function () {
+      return this.firstName + ' ' + this.lastName
+    }
+  }
+})
+					</code></pre>
+				</section>
+				<section data-background-color="#ffffff">
+					<h2>Computed Setter</h2>
+					<pre class="code"><code class="lang-javascript">
+//...
+computed: {
+  fullName: {
+// getter
+    get: function () {
+      return this.firstName + ' ' + this.lastName
+    },
+// setter
+    set: function (newValue) {
+      const names = newValue.split(' ')
+      this.firstName = names[0]
+      this.lastName = names[names.length - 1]
+    }
+  }
+}
+//...
+					</code></pre>
+				</section>
+			</section>
+
+			<section data-background-color="#ffffff">
+				<h2>Binding HTML Classes</h2>
+				<div class="flex-row">
+					<div class="flex-col-2">
+						<pre class="code"><code class="lang-html">
 &lt;div :class="{
   'active': isActive,
   'text-danger': HasError
 }"&gt;
 &lt;/div&gt;
-							</code></pre>
-						</div>
-						<div class="col-md-6">
-							<pre class="code"><code class="lang-javascript">
+						</code></pre>
+					</div>
+					<div class="flex-col-2">
+						<pre class="code"><code class="lang-javascript">
 //...
 data: {
   isActive: true,
   hasError: false
 }
-							</code></pre>
-						</div>
+						</code></pre>
 					</div>
+				</div>
+			</section>
+
+			<section data-background-color="#ffffff">
+				<h2>Conditional Rendering</h2>
+				<pre class="code"><code class="lang-html">
+&lt;div v-if=&quot;type === 'A'&quot;&gt;A&lt;/div&gt;
+&lt;div v-else-if=&quot;type === 'B'&quot;&gt;B&lt;/div&gt;
+&lt;div v-else-if=&quot;type === 'C'&quot;&gt;C&lt;/div&gt;
+&lt;div v-else&gt;Not A/B/C&lt;/div&gt;
+				</code></pre>
+			</section>
+
+			<section data-background-color="#ffffff">
+				<h2>Loops</h2>
+				<pre class="code"><code class="lang-html">
+&lt;ul id=&quot;example-1&quot;&gt;
+  &lt;li v-for=&quot;item in items&quot;&gt;{{ item.message }}&lt;/li&gt;
+&lt;/ul&gt;
+				</code></pre>
+				<pre class="code"><code class="lang-javascript">
+const example1 = new Vue({
+  el: '#example-1',
+  data: {
+    items: [
+      { message: 'Foo' },
+      { message: 'Bar' }
+    ]
+  }
+})
+				</code></pre>
+			</section>
+
+			<section data-background-color="#ffffff">
+				<h2>Method Event Handlers</h2>
+				<pre class="code"><code class="lang-html">
+&lt;div id=&quot;example-2&quot;&gt;
+  &lt;button v-on:click=&quot;greet&quot;&gt;Greet&lt;/button&gt;
+&lt;/div&gt;
+				</code></pre>
+				<pre class="code"><code class="lang-javascript">
+const example2 = new Vue({
+  el: '#example-2',
+  data: {
+    name: 'Vue.js'
+  },
+  methods: {
+    greet: function (event) {
+      // `this` inside methods points to the Vue instance
+    }
+  }
+})
+				</code></pre>
+			</section>
+
+			<section data-background-color="#ffffff">
+				<h2>Form Input Bindings</h2>
+				<pre class="code"><code class="lang-html">
+&lt;input v-model=&quot;message&quot; placeholder=&quot;edit me&quot;&gt;
+&lt;p&gt;Message is: {{ message }}&lt;/p&gt;
+				</code></pre>
+			</section>
+
+			<section data-background-color="#ffffff">
+				<h2>Event & Key Modifiers</h2>
+				<pre class="code"><code class="lang-html">
+&lt;!-- the click event's propagation will be stopped --&gt;
+&lt;a @click.stop=&quot;doThis&quot;&gt;&lt;/a&gt;
+
+&lt;!-- the submit event will no longer reload the page --&gt;
+&lt;form @submit.prevent=&quot;onSubmit&quot;&gt;&lt;/form&gt;
+
+&lt;!-- modifiers can be chained --&gt;
+&lt;a @click.stop.prevent=&quot;doThat&quot;&gt;&lt;/a&gt;
+
+&lt;!-- also available .tab, .delete, .esc, .space, ...--&gt;
+&lt;input @keyup.enter=&quot;submit&quot;&gt;
+				</code></pre>
+			</section>
+
+			<section data-background-color="#ffffff">
+				<h2>Component structure</h2>
+				<pre class="code"><code class="lang-javascript maxHeight-70">
+export default {
+  name: 'RangeSlider',
+  mixins: [], // share common functionality with component mixins
+  extends: {}, // compose new components
+  props: {}, // component properties/variables
+  data() {}, // variables
+  computed: {},
+  components: {}, // when component uses other components
+  watch: {}, // watch wariables
+  methods: {}, // methods
+  // component Lifecycle hooks
+  beforeCreate() {},
+  created() {},
+  beforeMount() {},
+  mounted() {},
+  beforeUpdate() {},
+  updated() {},
+  activated() {},
+  deactivated() {},
+  beforeDestroy() {},
+  destroyed() {},
+  errorCaptured() {},
+};
+				</code></pre>
+			</section>
+
+			<section class="etc" data-background-color="#ffffff">
+				<h2>Etc...</h2>
+				<a class="etc__link" href="https://vuejs.org/v2/guide/">https://vuejs.org/v2/guide/</a>
+			</section>
+
+			<section data-background-color="#ffffff">
+				<section>
+					<h2>What is Vuex?</h2>
 				</section>
+				<section data-background-color="#ffffff">
+					<h2>What is a "State Management Pattern"?</h2>
+					<img src="src/images/vuex.png" alt="vuex state management pattern">
+				</section>
+				<section data-background-color="#ffffff">
+					<h2>Shared state</h2>
+					<img style="height: 70vh;" src="src/images/vuex-shared.png" alt="vuex shared state">
+				</section>
+			</section>
 
+			<section data-background-color="#ffffff">
+				<h2>Dev tools</h2>
+				<img style="height: 70vh;" src="src/images/devtool.png" alt="vue devtools">
+			</section>
 
+			<section data-background-color="#ffffff">
+				<h1>Thanks</h1>
+			</section>
 
-
-
-
-
-
-
-				<section>END</section>
-			</div>
 		</div>
+	</div>
 
-		<script src="js/reveal.js"></script>
+	<script src="js/reveal.js"></script>
 
-		<script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
-			Reveal.initialize({
-				hash: true,
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/highlight/highlight.js' },
-					{ src: 'plugin/notes/notes.js', async: true }
-				]
-			});
-		</script>
-	</body>
+	<script>
+		// More info about config & dependencies:
+		// - https://github.com/hakimel/reveal.js#configuration
+		// - https://github.com/hakimel/reveal.js#dependencies
+		Reveal.initialize({
+			hash: true,
+			dependencies: [
+				{ src: 'plugin/markdown/marked.js' },
+				{ src: 'plugin/markdown/markdown.js' },
+				{ src: 'plugin/highlight/highlight.js' },
+				{ src: 'plugin/notes/notes.js', async: true }
+			]
+		});
+	</script>
+
+</body>
 </html>

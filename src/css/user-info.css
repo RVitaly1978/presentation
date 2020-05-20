@@ -1,11 +1,15 @@
 
 @import "./variables.css";
 
+.block-user-info {
+  width: auto;
+}
+
 .user-info__photo {
   box-shadow: none;
   border: var(--photo-border-width) var(--photo-border-style) var(--photo-border-color);
-  width: var(--photo-width);
-  border-radius: var(--photo-border-radius);
+  width: var(--photo-width) !important;
+  border-radius: var(--photo-border-radius) !important;
 }
 
 .user-info__name {
@@ -16,6 +20,7 @@
 .user-info__position {
   font-size: 0.7em;
   font-weight: 200;
+  text-align: left;
 }
 
 .user-info__position a {
@@ -23,13 +28,13 @@
 }
 
 .user-info__social {
-  margin-top: 50px;
-  font-size: 0.4em;
+  margin-top: 40px;
+  font-size: 0.5em;
 }
 
 .user-info__social a {
   color: var(--link-color);
-  padding: 0 10px;
+  padding: 5px 10px;
 }
 
 .user-info__social a:hover {

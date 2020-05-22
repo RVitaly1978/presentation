@@ -242,6 +242,37 @@
 
 			<section data-background-color="#ffffff">
 				<section>
+					<h2>Component structure</h2>
+					<pre class="code"><code class="lang-javascript maxHeight-70">
+export default {
+  name: 'RangeSlider',
+  mixins: [], // share common functionality with component mixins
+  extends: {}, // compose new components
+  props: {}, // component properties/variables
+  data() {}, // variables
+  computed: {},
+  components: {}, // when component uses other components
+  watch: {}, // watch wariables
+  methods: {}, // methods
+  // component Lifecycle hooks
+  beforeCreate() {},
+  created() {},
+  beforeMount() {},
+  mounted() {},
+  beforeUpdate() {},
+  updated() {},
+  beforeDestroy() {},
+  destroyed() {},
+};
+					</code></pre>
+				</section>
+				<section data-background-color="#ffffff">
+					<img src="src/images/anatomy-of-vue-component.png" alt="Anatomy of vue components">
+				</section>
+			</section>
+
+			<section data-background-color="#ffffff">
+				<section>
 					<h2>Interpolations</h2>
 				</section>
 				<section data-background-color="#ffffff">
@@ -515,40 +546,6 @@ const example2 = new Vue({
 				</code></pre>
 			</section>
 
-			<section data-background-color="#ffffff">
-				<section>
-					<h2>Component structure</h2>
-					<pre class="code"><code class="lang-javascript maxHeight-70">
-export default {
-  name: 'RangeSlider',
-  mixins: [], // share common functionality with component mixins
-  extends: {}, // compose new components
-  props: {}, // component properties/variables
-  data() {}, // variables
-  computed: {},
-  components: {}, // when component uses other components
-  watch: {}, // watch wariables
-  methods: {}, // methods
-  // component Lifecycle hooks
-  beforeCreate() {},
-  created() {},
-  beforeMount() {},
-  mounted() {},
-  beforeUpdate() {},
-  updated() {},
-  activated() {},
-  deactivated() {},
-  beforeDestroy() {},
-  destroyed() {},
-  errorCaptured() {},
-};
-					</code></pre>
-				</section>
-				<section data-background-color="#ffffff">
-					<img src="src/images/anatomy-of-vue-component.png" alt="Anatomy of vue components">
-				</section>
-			</section>
-
 			<section class="etc" data-background-color="#ffffff">
 				<h2>Etc...</h2>
 				<a class="etc__link" href="https://vuejs.org/v2/guide/">https://vuejs.org/v2/guide/</a>
@@ -574,7 +571,19 @@ export default {
 			</section>
 
 			<section data-background-color="#ffffff">
-				<h1>Thanks</h1>
+				<h1>Vue 3</h1>
+				<ul>
+					<li class="fragment">Composition API</li>
+					<li class="fragment">Virtual DOM rewrite for better performance and improved TypeScript support</li>
+					<li class="fragment">Native portals – now called Teleport</li>
+					<li class="fragment">Fragments (virtual elements that won't be rendered in the DOM tree)</li>
+					<li class="fragment">Global mounting</li>
+					<li class="fragment">Conditional suspending of component rendering</li>
+				</ul>
+			</section>
+
+			<section data-background-color="#ffffff">
+					<h2>Thanks</h2>
 			</section>
 
 		</div>

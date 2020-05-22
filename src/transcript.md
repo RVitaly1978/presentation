@@ -81,6 +81,21 @@ When we pass a plain JavaScript object to a Vue instance as its data option, Vue
 ***
 
 #### slide №6
+## Component structure
+Anatomy of Vue Component give us a brief overview of a typical Vue single file component (SFC). At high-level, Vue single file component consists of three sections:
++ Template
++ Script
++ Style
+
+Template section is where we put our HTML markup code along with any data variables or computed properties which are defined in script section of the code.
+
+In script section, weu can define any local data, props, computed properties, watchers, methods, Vue lifecycle hooks along with the registration of any child component as needed.
+
+Finally, the style section allow us to define our component styles to make it presentable using normal CSS or by using Less, SCSS pre-processors etc.
+
+***
+
+#### slide №7
 ## Interpolations
 Vue.js uses an HTML-based template syntax that allows you to declaratively bind the rendered DOM to the underlying Vue instance’s data. All Vue.js templates are valid HTML that can be parsed by spec-compliant browsers and HTML parsers.
 Under the hood, Vue compiles the templates into Virtual DOM render functions. Combined with the reactivity system, Vue is able to intelligently figure out the minimal number of components to re-render and apply the minimal amount of DOM manipulations when the app state changes.
@@ -107,7 +122,7 @@ So far we’ve only been binding to simple property keys in our templates. But V
 
 ***
 
-#### slide №7
+#### slide №8
 ## Directives
 Directives are special attributes with the `v-` prefix. Directive attribute values are expected to be **a single JavaScript expression**. A directive’s job is to reactively apply side effects to the DOM when the value of its expression changes.
 
@@ -137,7 +152,7 @@ Modifiers are special postfixes denoted by a dot, which indicate that a directiv
 
 ***
 
-#### slide №8
+#### slide №9
 ## Computed Properties and Watchers
 + computed property:
 
@@ -155,7 +170,7 @@ Computed properties are by default getter-only, but we can also provide a `sette
 
 ***
 
-#### slide №9
+#### slide №10
 ## Class and Style Bindings
 
 A common need for data binding is manipulating an element’s class list and its inline styles. Since they are both attributes, we can use `v-bind` to handle them: we only need to calculate a final string with our expressions. However, meddling with string concatenation is annoying and error-prone. For this reason, Vue provides special enhancements when `v-bind` is used with `class` and `style`. In addition to strings, the expressions can also evaluate to objects or arrays.
@@ -176,7 +191,7 @@ The array syntax for `v-bind:style` allows to apply multiple style objects to th
 
 ***
 
-#### slide №10
+#### slide №11
 ## Conditional rendering
 The directive `v-if` is used to conditionally render a block. The block will only be rendered if the directive’s expression returns a truthy value. It is also possible to add an “else block” with `v-else`. The `v-else-if` (new in v2.1.0+), as the name suggests, serves as an “else if block” for `v-if`. It can also be chained multiple times.
 
@@ -186,13 +201,13 @@ The difference is that an element with `v-show` will always be rendered and rema
 
 ***
 
-#### slide №11
+#### slide №12
 ## List rendering
 One of the options for list rendering is mapping an array to elements with `v-for`. We can use the `v-for` directive to render a list of items based on an array. The `v-for` directive requires a special syntax in the form of `item in items`, where `items` is the source data array and `item` is an alias for the array element being iterated on.
 
 ***
 
-#### slide №12
+#### slide №13
 ## Method event handlers
 We can use the `v-on` directive to listen to DOM events and run some JavaScript when they’re triggered.
 
@@ -200,7 +215,7 @@ The logic for many event handlers will be more complex though, so keeping our Ja
 
 ***
 
-#### slide №13
+#### slide №14
 ## Form input bindings
 We can use the `v-model` directive to create two-way data bindings on form input, textarea, and select elements. It automatically picks the correct way to update the element based on the input type. Although a bit magical, `v-model` is essentially syntax sugar for updating data on user input events, plus special care for some edge cases.
 
@@ -212,7 +227,7 @@ We can use the `v-model` directive to create two-way data bindings on form input
 
 ***
 
-#### slide №14
+#### slide №15
 ## Event & Key modifiers
 - event modifiers:
 
@@ -243,8 +258,39 @@ New in 2.2.0+: modifiers (`.left`, `.right`, `.middle`) restrict the handler to 
 
 ***
 
-#### slide №15
-## Component structure
+#### slide №16
+## What is vuex
+Vuex is a **state management pattern** + **library** for Vue.js applications. It serves as a centralized store for all the components in an application, with rules ensuring that the state can only be mutated in a predictable fashion.
 
+The image below shows an application on Vue+Vuex with the following parts:
+
++ State, which is the only data source for components.
++ Vue-components (Vue-components), which are essentially only declarative status display.
++ Actions (Actions), which catch the event that occurred, gather data from external API, and trigger a needed mutation.
++ Mutations are the only part that can change the state and, having received data from Actions, applies them to the state.
 
 ***
+
+#### slide №17
+## Dev tools
+For debugging in the browser there is a Vue-devtools, which allows us to see what components are in our application and their current status. It also works great with Vuex and allows us to perform so-called time-travel debugging: in the browser, we can see the status history and switch between them.
+
+***
+
+#### slide №18
+## Veu 3
+As Evan You summarized it, Vue 3 will be **faster**, **smaller**, **more maintainable** and it will be **easier to target native**.
+
+One of the most significant changes is that a new API that will allow for a function-based way of writing our component, inspired by React Hooks. It lets us encapsulate logic into "composition functions" and reuse that logic across components.
+
+Other pretty exciting changes in Vue 3:
++ Virtual DOM rewrite for better performance and improved TypeScript support
++ Native portals – now called Teleport
++ Fragments (virtual elements that won't be rendered in the DOM tree)
++ Global mounting
++ Conditional suspending of component rendering
++ ... and more.
+
+***
+
+## END

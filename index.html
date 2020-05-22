@@ -231,10 +231,6 @@
 					<img src="src/images/components.png" alt="components">
 				</section>
 				<section data-background-color="#ffffff">
-					<h2>Anatomy of vue components</h2>
-					<img src="src/images/anatomy-of-vue-component.png" alt="Anatomy of vue components">
-				</section>
-				<section data-background-color="#ffffff">
 					<h2>Lifecycle</h2>
 					<img src="src/images/lifecycle.png" alt="lifecycle">
 				</section>
@@ -520,8 +516,9 @@ const example2 = new Vue({
 			</section>
 
 			<section data-background-color="#ffffff">
-				<h2>Component structure</h2>
-				<pre class="code"><code class="lang-javascript maxHeight-70">
+				<section>
+					<h2>Component structure</h2>
+					<pre class="code"><code class="lang-javascript maxHeight-70">
 export default {
   name: 'RangeSlider',
   mixins: [], // share common functionality with component mixins
@@ -545,7 +542,11 @@ export default {
   destroyed() {},
   errorCaptured() {},
 };
-				</code></pre>
+					</code></pre>
+				</section>
+				<section data-background-color="#ffffff">
+					<img src="src/images/anatomy-of-vue-component.png" alt="Anatomy of vue components">
+				</section>
 			</section>
 
 			<section class="etc" data-background-color="#ffffff">

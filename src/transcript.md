@@ -214,6 +214,37 @@ We can use the `v-model` directive to create two-way data bindings on form input
 
 #### slide №14
 ## Event & Key modifiers
+- event modifiers:
+
+It is a very common need to call `event.preventDefault()` or `event.stopPropagation()` inside event handlers. Although we can do this easily inside methods, it would be better if the methods can be purely about data logic rather than having to deal with DOM event details. To address this problem, Vue provides event modifiers for `v-on`. Recall that modifiers are directive postfixes denoted by a dot.
+
++ .stop
++ .prevent
++ .capture
++ .self
++ .once
++ .passive
+
+- key modifiers:
+
+When listening for keyboard events, we often need to check for specific keys. Vue allows adding key modifiers for `v-on` when listening for key events. Vue provides aliases for the most commonly used key codes when necessary for legacy browser support:
+
++ .enter
++ .tab
++ .delete (captures both “Delete” and “Backspace” keys)
++ .esc
++ .space
++ .up
++ .down
++ .left
++ .right
+
+New in 2.2.0+: modifiers (`.left`, `.right`, `.middle`) restrict the handler to events triggered by a specific mouse button.
+
+***
+
+#### slide №15
+## Component structure
 
 
 ***

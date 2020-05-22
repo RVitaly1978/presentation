@@ -64,9 +64,9 @@
 				<div class="history">
 					<h2>History</h2>
 					<ul>
-						<li class="fragment">Started in late 2013</li>
-						<li class="fragment">Initial release Feb. 2014 (v0.6)</li>
-						<li class="fragment">Latest stable release v2.6.11</li>
+						<li>Started in late 2013</li>
+						<li>Initial release Feb. 2014 (v0.6)</li>
+						<li>Latest stable release v2.6.11</li>
 						<li class="fragment">Next?... <span class="fragment">v3.0 in Q2 2020</span></li>
 					</ul>
 				</div>
@@ -331,27 +331,6 @@
 					<h2>Computed <br>Properties <br>and Watchers</h2>
 				</section>
 				<section data-background-color="#ffffff">
-					<h2>Watch</h2>
-					<pre class="code"><code class="lang-javascript">
-const vm = new Vue({
-  el: '#demo',
-  data: {
-    firstName: 'Foo',
-    lastName: 'Bar',
-    fullName: 'Foo Bar'
-  },
-  watch: {
-    firstName: function (val) {
-      this.fullName = val + ' ' + this.lastName
-    },
-    lastName: function (val) {
-      this.fullName = this.firstName + ' ' + val
-    }
-  }
-})
-					</code></pre>
-				</section>
-				<section data-background-color="#ffffff">
 					<h2>Computed</h2>
 					<pre class="code"><code class="lang-html">
 &lt;div id="demo"&gt;{{ fullName }}&lt;/div&gt;
@@ -369,6 +348,27 @@ const vm = new Vue({
     }
   }
 })
+					</code></pre>
+				</section>
+				<section data-background-color="#ffffff">
+					<h2>Watch</h2>
+					<pre class="code"><code class="lang-javascript">
+const vm = new Vue({
+  el: '#demo',
+  data: {
+    firstName: 'Foo',
+    lastName: 'Bar',
+    fullName: 'Foo Bar'
+  },
+  watch: {
+    firstName: function (val) {
+      this.fullName = val + ' ' + this.lastName
+    },
+    lastName: function (val) {
+      this.fullName = this.firstName + ' ' + val
+    }
+  }
+});
 					</code></pre>
 				</section>
 				<section data-background-color="#ffffff">
@@ -395,27 +395,35 @@ computed: {
 			</section>
 
 			<section data-background-color="#ffffff">
-				<h2>Binding HTML Classes</h2>
-				<div class="flex-row">
-					<div class="flex-col-2">
-						<pre class="code"><code class="lang-html">
-&lt;div :class="{
+				<section>
+					<h2>Binding HTML Classes</h2>
+					<pre class="code"><code class="lang-html">
+&lt;div v-bind:class="{
   'active': isActive,
-  'text-danger': HasError
-}"&gt;
-&lt;/div&gt;
-						</code></pre>
-					</div>
-					<div class="flex-col-2">
-						<pre class="code"><code class="lang-javascript">
+  'text-danger': hasError
+}"&gt; ... &lt;/div&gt;
+					</code></pre>
+					<pre class="code"><code class="lang-javascript">
 //...
-data: {
-  isActive: true,
-  hasError: false
-}
-						</code></pre>
-					</div>
-				</div>
+data: { isActive: true, hasError: false }
+					</code></pre>
+					<pre class="code"><code class="lang-html">
+&lt;div v-bind:class="classObject"&gt; ... &lt;/div&gt;
+					</code></pre>
+				</section>
+				<section>
+					<h2>Binding Inline Styles</h2>
+					<pre class="code"><code class="lang-html">
+&lt;div v-bind:style="{
+  color: activeColor,
+  fontSize: fontSize + 'px'
+}"&gt; ... &lt;/div&gt;
+					</code></pre>
+					<pre class="code"><code class="lang-javascript">
+//...
+data: { activeColor: 'red', fontSize: 30 }
+					</code></pre>
+				</section>
 			</section>
 
 			<section data-background-color="#ffffff">
@@ -426,13 +434,18 @@ data: {
 &lt;div v-else-if=&quot;type === 'C'&quot;&gt;C&lt;/div&gt;
 &lt;div v-else&gt;Not A/B/C&lt;/div&gt;
 				</code></pre>
+				<pre class="code"><code class="lang-html">
+&lt;h1 v-show='ok'&gt;Hello!&lt;/div&gt;
+				</code></pre>
 			</section>
 
 			<section data-background-color="#ffffff">
-				<h2>Loops</h2>
+				<h2>List Rendering</h2>
 				<pre class="code"><code class="lang-html">
 &lt;ul id=&quot;example-1&quot;&gt;
-  &lt;li v-for=&quot;item in items&quot;&gt;{{ item.message }}&lt;/li&gt;
+  &lt;li v-for=&quot;item in items&quot; v-bind:key=&quot;item.message&quot;&gt;
+    {{ item.message }}
+  &lt;/li&gt;
 &lt;/ul&gt;
 				</code></pre>
 				<pre class="code"><code class="lang-javascript">
@@ -475,6 +488,17 @@ const example2 = new Vue({
 				<pre class="code"><code class="lang-html">
 &lt;input v-model=&quot;message&quot; placeholder=&quot;edit me&quot;&gt;
 &lt;p&gt;Message is: {{ message }}&lt;/p&gt;
+				</code></pre>
+				<pre class="code"><code class="lang-html">
+&lt;input type=&quot;checkbox&quot; id=&quot;checkbox&quot; v-model=&quot;checked&quot;&gt;
+&lt;label for=&quot;checkbox&quot;&gt;{{ checked }}&lt;/label&gt;
+				</code></pre>
+				<pre class="code"><code class="lang-html">
+&lt;input type=&quot;radio&quot; id=&quot;one&quot; value=&quot;One&quot; v-model=&quot;picked&quot;&gt;
+&lt;label for=&quot;one&quot;&gt;One&lt;/label&gt;
+&lt;input type=&quot;radio&quot; id=&quot;two&quot; value=&quot;Two&quot; v-model=&quot;picked&quot;&gt;
+&lt;label for=&quot;two&quot;&gt;Two&lt;/label&gt;
+&lt;span&gt;Picked: {{ picked }}&lt;/span&gt;
 				</code></pre>
 			</section>
 

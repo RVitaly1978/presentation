@@ -45,7 +45,6 @@ body {
 }
 
 .reveal section img {
-  box-shadow: 0 0 5px 1px var(--dark-background) !important;
   border: none;
   background: none;
   max-height: 60vmin !important;

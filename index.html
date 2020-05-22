@@ -67,6 +67,7 @@
 						<li class="fragment">Started in late 2013</li>
 						<li class="fragment">Initial release Feb. 2014 (v0.6)</li>
 						<li class="fragment">Latest stable release v2.6.11</li>
+						<li class="fragment">Next?... <span class="fragment">v3.0 in Q2 2020</span></li>
 					</ul>
 				</div>
 			</section>
@@ -195,6 +196,11 @@
 						<td>Server-side rendering support</td>
 					</tr>
 					<tr>
+					<tr>
+						<td><a class="ecosystem__link" href="https://github.com/vuejs/vue-test-utils">vue-test-utils</a></td>
+						<td>Testing utility library</td>
+					</tr>
+					<tr>
 						<td><a class="ecosystem__link" href="https://github.com/vuejs/vue-class-component">vue-class-component</a></td>
 						<td>TypeScript decorator for a class-based API</td>
 					</tr>
@@ -214,11 +220,19 @@
 					<h2>How it works?</h2>
 				</section>
 				<section data-background-color="#ffffff">
+					<h2>MVVM model</h2>
 					<img src="src/images/MVVM.png" alt="MVVM">
+				</section>
+				<section data-background-color="#ffffff">
+					<img src="src/images/mvvm-add.png" alt="MVVM">
 				</section>
 				<section data-background-color="#ffffff">
 					<h2>Components</h2>
 					<img src="src/images/components.png" alt="components">
+				</section>
+				<section data-background-color="#ffffff">
+					<h2>Anatomy of vue components</h2>
+					<img src="src/images/anatomy-of-vue-component.png" alt="Anatomy of vue components">
 				</section>
 				<section data-background-color="#ffffff">
 					<h2>Lifecycle</h2>
@@ -274,18 +288,34 @@
 					<h5>v-bind</h5>
 					<pre class="code"><code class="lang-html">
 	&lt;!-- full syntax --&gt;
-	&lt;a v-bind:href="url"&gt;&lt;/a&gt;
+	&lt;a v-bind:href="url"&gt; ... &lt;/a&gt;
+
 	&lt;!-- shorthand --&gt;
-	&lt;a :href="url"&gt;&lt;/a&gt;
+	&lt;a :href="url"&gt; ... &lt;/a&gt;
 					</code></pre>
 				</section>
 				<section>
 					<h5>v-on</h5>
 					<pre class="code"><code class="lang-html">
 	&lt;!-- full syntax --&gt;
-	&lt;a v-on:click="doMethod"&gt;&lt;/a&gt;
+	&lt;a v-on:click="doMethod"&gt; ... &lt;/a&gt;
+
 	&lt;!-- shorthand --&gt;
-	&lt;a @click="doMethod"&gt;&lt;/a&gt;
+	&lt;a @click="doMethod"&gt; ... &lt;/a&gt;
+					</code></pre>
+				</section>
+				<section>
+					<h5>Dynamic arguments</h5>
+					<pre class="code"><code class="lang-html">
+	&lt;!-- full syntax --&gt;
+	&lt;a v-bind:[attributeName]="url"&gt; ... &lt;/a&gt;
+	&lt;!-- shorthand --&gt;
+	&lt;a :[attributeName]="url"&gt; ... &lt;/a&gt;
+
+	&lt;!-- full syntax --&gt;
+	&lt;a v-on:[eventName]="doSomething"&gt; ... &lt;/a&gt;
+	&lt;!-- shorthand --&gt;
+	&lt;a @[eventName]="doSomething"&gt; ... &lt;/a&gt;
 					</code></pre>
 				</section>
 				<section>

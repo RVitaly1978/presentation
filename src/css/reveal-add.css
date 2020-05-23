@@ -7,7 +7,16 @@ section.has-light-background h3,
 section.has-light-background h4,
 section.has-light-background h5,
 section.has-light-background h6 {
-  color: var(--dark-background) !important;
+  color: var(--dark-background);
+}
+
+section.has-light-background.present h1,
+section.has-light-background.present h2,
+section.has-light-background.present h3,
+section.has-light-background.present h4,
+section.has-light-background.present h5,
+section.has-light-background.present h6 {
+  color: var(--dark-background);
 }
 
 body {
@@ -29,6 +38,11 @@ body {
   word-wrap: break-word;
 }
 
+.reveal h2 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
 .reveal .controls {
   color: var(--controls-color);
 }
@@ -47,15 +61,17 @@ body {
 .reveal section img {
   border: none;
   background: none;
-  max-height: 60vmin !important;
+  max-height: 70vmin;
+  box-shadow: none;
+}
+
+.reveal section img.add {
+  max-height: 60vmin;
 }
 
 .reveal pre code {
   padding-left: 10px;
   max-height: 80vmin;
-}
-
-.reveal pre code.maxHeight-70 {
-  width: 100%;
-  max-height: 70vmin;
+  font-size: 0.9em;
+  line-height: 1.2;
 }

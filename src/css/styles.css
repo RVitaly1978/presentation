@@ -1,7 +1,7 @@
 
 @import "./variables.css";
 
-@import "./_reveal.css";
+@import "./reveal-add.css";
 
 @import "./vue-logo.css";
 @import "./user-info.css";

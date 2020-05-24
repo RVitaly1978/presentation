@@ -40,7 +40,7 @@
 						<h3 class="vue-logo__title">Vue.JS</h3>
 				</div>
 				<aside class="notes" data-markdown>
-					Today I want to tell about js framework VUE
+					Today I want to tell about js framework **Vue**
 				</aside>
 			</section>
 
@@ -62,7 +62,7 @@
 					</div>
 				</div>
 				<aside class="notes" data-markdown>
-					Vue was created by Evan You after working for Google using AngularJS in a number of projects.
+					**Vue** was created by Evan You after working for Google using AngularJS in a number of projects.
 
 					He later summed up his thought process:
 					>I figured, what if I could just extract the part that I really liked about Angular and build something really lightweight.
@@ -82,7 +82,7 @@
 				<aside class="notes" data-markdown>
 					The first source code commit to the project was dated July 2013.
 
-					What's in the future? There's no official release date, but the roadmap shows the release Vue 3.0 is planned in Q2 2020.
+					What's in the future? There's no official release date, but the roadmap shows the release **Vue** 3 is planned in this year.
 				</aside>
 			</section>
 
@@ -91,7 +91,7 @@
 					<h2>Advantages</h2>
 					<ul>
 						<li>Very Small Size</li>
-						<li>Easy to Understand <br>and Develop Applications</li>
+						<li>Easy to Understand and Develop Applications</li>
 						<li>Simple Integration</li>
 						<li>Detailed Documentation</li>
 						<li>Flexibility</li>
@@ -109,43 +109,8 @@
 						<li>Mix the best of React and Angular</li>
 					</ul>
 					<aside class="notes" data-markdown>
-						Vue took the best features of other libraries such as **templating syntax**, **two-way data binding** and **directives** from Angular, **virtual DOM implementation** from React.
+						**Vue** took the best features of other libraries such as **templating syntax**, **two-way data binding** and **directives** from Angular, **virtual DOM implementation** from React.
 					</aside>
-				</section>
-				<section>
-					<h2>Very Small Size</h2>
-					<table>
-						<tr>
-							<th>Name</th>
-							<th>Size</th>
-						</tr>
-						<tr>
-							<td>React + react-dom</td>
-							<td>34.4 kB (gzipped)</td>
-						</tr>
-						<tr>
-							<td>Angular</td>
-							<td>62.2 kB (gzipped)</td>
-						</tr>
-						<tr>
-							<td>Vue.js</td>
-							<td>33.3 kB (gzipped)</td>
-						</tr>
-						<tr>
-							<td>jquery</td>
-							<td>31.1 kB (gzipped)</td>
-						</tr>
-					</table>
-				</section>
-				<section>
-					<h2>Simple Integration</h2>
-					<ul>
-						<li>tag script (Vue.js runtime)</li>
-						<li>webpack</li>
-						<li>web components</li>
-						<li>browserify</li>
-						<li>requirejs</li>
-					</ul>
 				</section>
 				<section>
 					<h2>Flexibility</h2>
@@ -155,10 +120,9 @@
 						<li>Use JSX in a Javascript file</li>
 						<li>Make your template in pure Javascript using virtual nodes</li>
 					</ul>
-					<p class="fragment">
-						This flexibility makes it easy to switch to Vue because React developers,
-						Angular developers, or developers new to JS frameworks would all find Vue’s design familiar
-					</p>
+					<aside class="notes" data-markdown>
+						All that makes using Vue.js very comfortable.
+						</aside>
 				</section>
 				<section>
 					<h2>Right to choose</h2>
@@ -182,8 +146,6 @@
 						</li>
 					</ul>
 					<aside class="notes" data-markdown>
-						All that makes using Vue.js very comfortable.
-
 						Seems like it has the purpose to become a JavaScript framework of choice.
 					</aside>
 				</section>
@@ -235,16 +197,9 @@
 					</tr>
 				</table>
 				<aside class="notes" data-markdown>
-					Vue can easily be a library and a framework depending on our goals. It consists of a core library that focuses on the view layer and an ecosystem of supporting libraries.
+					**Vue** can easily be a library and a framework depending on our goals. It consists of a core library that focuses on the view layer and an ecosystem of supporting libraries.
 
-					Some of the core libraries maintained by Vue team:
-					+ Vue Router - it makes building Single Page Applications with Vue.js more simple.
-					+ Vuex is a state management pattern and a library for Vue.js applications.
-					+ Vue-CLI is a full system for rapid Vue.js development.
-					+ Vue-loader is loader that allows us to make Vue components in a format called Single-File Components (SFCs).
-					+ Vue-Server-Renderer runs both on server and client side where the majority of the application code is shared.
-					+ Vue Test Utils is the official unit testing utility library for Vue.js.
-					+ Vue Dev-Tools is a Browser devtools extension for debugging Vue.js applications.
+					Some of the core libraries maintained by **Vue** team are shown in the table.
 
 					And others...
 				</aside>
@@ -258,7 +213,7 @@
 					<h2>MVVM model</h2>
 					<img src="src/images/MVVM.png" alt="MVVM">
 					<aside class="notes" data-markdown>
-						Technically, Vue.js is focused on the ViewModel layer of the MVVM pattern.
+						Technically, **Vue** is focused on the ViewModel layer of the MVVM pattern.
 
 						It connects the View and the Model via two way data bindings.
 
@@ -268,34 +223,32 @@
 				<section data-background-color="#ffffff">
 					<img src="src/images/mvvm-add.png" alt="MVVM">
 					<aside class="notes" data-markdown>
-						ViewModel - an object that syncs the Model and the View. In Vue.js, every Vue instance is a ViewModel. They are instantiated with the Vue constructor or its sub-classes.
+						ViewModel - an object that syncs the Model and the View. In **Vue**.js, every **Vue** instance is a ViewModel. They are instantiated with the **Vue** constructor or its sub-classes.
 
-						View - The actual DOM that is managed by Vue instances. Vue.js uses DOM-based templating. Each Vue instance is associated with a corresponding DOM element. When a Vue instance is created, it recursively walks all child nodes of its root element while setting up the necessary data bindings. After the View is compiled, it becomes reactive to data changes.
+						View - The actual DOM that is managed by **Vue** instances. **Vue**.js uses DOM-based templating. Each **Vue** instance is associated with a corresponding DOM element.
 
-						Model - A slightly modified plain JavaScript object. In Vue.js, models are simply plain JavaScript objects, or data objects. Once an object is used as data inside a Vue instance, it becomes reactive. You can manipulate their properties and Vue instances that are observing them will be notified of the changes.
+						Model - A slightly modified plain JavaScript object, or data object. Once an object is used as data inside a **Vue** instance, it becomes reactive.
 					</aside>
 				</section>
 				<section data-background-color="#ffffff">
 					<h2>Components</h2>
 					<img src="src/images/components.png" alt="components">
 					<aside class="notes" data-markdown>
-						In Vue.js, every component is simply a Vue instance. Components form a nested tree-like hierarchy that represents our application interface. They can be instantiated by a custom constructor returned from `Vue.extend`, but a more declarative approach is registering them with `Vue.component(id, constructor)`. Once registered, they can be declaratively nested in other Vue instance’s templates in the form of custom elements.
+						In **Vue**.js, every component is simply a **Vue** instance. Components form a nested tree-like hierarchy that represents our application interface. They can be instantiated by a custom constructor returned from `Vue.extend`, but a more declarative approach is registering them with `Vue.component(id, constructor)`.
 					</aside>
 				</section>
 				<section data-background-color="#ffffff">
 					<h2>Lifecycle</h2>
 					<img src="src/images/lifecycle.png" alt="lifecycle">
 					<aside class="notes" data-markdown>
-						Each Vue instance goes through a series of initialization steps when it’s created - for example, it needs to set up data observation, compile the template, mount the instance to the DOM, and update the DOM when data changes. Along the way, it also runs functions called lifecycle hooks, giving users the opportunity to add their own code at specific stages.
+						Each **Vue** instance goes through a series of initialization steps when it’s created - for example, it needs to set up data observation, compile the template, mount the instance to the DOM, and update the DOM when data changes. Along the way, it also runs functions called lifecycle hooks, giving users the opportunity to add their own code at specific stages.
 					</aside>
 				</section>
 				<section data-background-color="#ffffff">
 					<h2>Reactivity</h2>
 					<img src="src/images/reactivity.png" alt="reactivity">
 					<aside class="notes" data-markdown>
-							One of Vue’s most distinct features is the unobtrusive reactivity system. Models are just plain JavaScript objects. When we modify them, the view updates. It makes state management simple and intuitive.
-
-							When we pass a plain JavaScript object to a Vue instance as its data option, Vue will walk through all of its properties and convert them to **getter/setters** using `Object.defineProperty`. Every component instance has a corresponding **watcher** instance, which records any properties “touched” during the component’s render as dependencies. Later on when a dependency’s setter is triggered, it notifies the watcher, which in turn causes the component to re-render.
+						Every component instance has a corresponding **watcher** instance, which records any properties “touched” during the component’s render as dependencies. Later on when a dependency’s setter is triggered, it notifies the watcher, which in turn causes the component to re-render.
 					</aside>
 				</section>
 			</section>
@@ -304,14 +257,14 @@
 				<h2>Component structure</h2>
 				<img src="src/images/anatomy-of-vue-component.png" alt="Anatomy of vue components">
 				<aside class="notes" data-markdown>
-					Anatomy of Vue Component give us a brief overview of a typical Vue single file component (SFC). At high-level, Vue single file component consists of three sections:
+					Anatomy of **Vue** Component give us a brief overview of a typical **Vue** single file component. At high-level, **Vue** single file component consists of three sections:
 					+ Template
 					+ Script
 					+ Style
 
 					Template section is where we put our HTML markup code along with any data variables or computed properties which are defined in script section of the code.
 
-					In script section, we can define any local data, props, computed properties, watchers, methods, Vue lifecycle hooks along with the registration of any child component as needed.
+					In script section, we can define any local data, props, computed properties, watchers, methods, **Vue** lifecycle hooks along with the registration of any child component as needed.
 
 					Finally, the style section allow us to define our component styles to make it presentable using normal CSS or by using Less, SCSS pre-processors etc.
 				</aside>
@@ -321,9 +274,9 @@
 				<section>
 					<h2>Interpolations</h2>
 					<aside class="notes" data-markdown>
-						Vue.js uses an HTML-based template syntax that allows us to declaratively bind the rendered DOM to the underlying Vue instance’s data.
+						**Vue**.js uses an HTML-based template syntax that allows us to declaratively bind the rendered DOM to the underlying **Vue** instance’s data.
 
-						Under the hood, Vue compiles the templates into Virtual DOM render functions. Combined with the reactivity system, Vue is able to intelligently figure out the minimal number of components to re-render and apply the minimal amount of DOM manipulations when the app state changes.
+						Under the hood, **Vue** compiles the templates into Virtual DOM render functions. Combined with the reactivity system, **Vue** is able to intelligently figure out the minimal number of components to re-render and apply the minimal amount of DOM manipulations when the app state changes.
 					</aside>
 				</section>
 				<section data-background-color="#ffffff">
@@ -340,6 +293,7 @@
 					<h2>Raw HTML</h2>
 					<pre class="code"><code class="lang-html">
 &lt;p&gt;Using mustaches: {{ rawHtml }}&lt;/p&gt;
+
 &lt;p&gt;Using v-html directive: &lt;span v-html="rawHtml"&gt;&lt;/span&gt;&lt;/p&gt;
 					</code></pre>
 					<aside class="notes" data-markdown>
@@ -362,10 +316,11 @@
 {{ number + 1 }}
 {{ ok ? 'YES' : 'NO' }}
 {{ message.split('').reverse().join('') }}
+
 &lt;div v-bind:id="'list-' + id"&gt;&lt;/div&gt;
 					</code></pre>
 					<aside class="notes" data-markdown>
-						Vue.js actually supports the full power of JavaScript expressions inside all data bindings. These expressions will be evaluated as JavaScript in the data scope of the owner Vue instance. One restriction is that each binding can only contain **one single expression**.
+						**Vue**.js actually supports the full power of JavaScript expressions inside all data bindings.
 					</aside>
 				</section>
 			</section>
@@ -373,7 +328,7 @@
 			<section data-background-color="#ffffff">
 				<section>
 					<h2>Directives</h2>
-					<ul>Some built-in directives:
+					<ul>
 						<li>v-bind — dynamically binds to one or more attributes</li>
 						<li>v-if — condition for element rendering</li>
 						<li>v-for — loops an array of objects</li>
@@ -382,7 +337,9 @@
 						<li>v-show — toggles element visibility by changing the CSS display property</li>
 					</ul>
 					<aside class="notes" data-markdown>
-						Directives are special attributes with the `v-` prefix. Directive attribute values are expected to be **a single JavaScript expression**. A directive’s job is to reactively apply side effects to the DOM when the value of its expression changes.
+						Directives are special attributes with the `v-` prefix. A directive’s job is to reactively apply side effects to the DOM when the value of its expression changes.
+
+						Some built-in directives are shown in the list with some examples in the following slides.
 					</aside>
 				</section>
 				<section>
@@ -428,7 +385,7 @@
 	&lt;form v-on:submit.prevent="onSubmit"&gt; ... &lt;/form&gt;
 					</code></pre>
 					<aside class="notes" data-markdown>
-						Modifiers are special postfixes denoted by a dot, which indicate that a directive should be bound in some special way. For example, the `.prevent` modifier tells the `v-on` **directive** to call `event.preventDefault()` on the triggered event.
+						Modifiers are special postfixes, which indicate that a directive should be bound in some special way.
 					</aside>
 				</section>
 			</section>
@@ -481,7 +438,7 @@ const vm = new Vue({
 });
 					</code></pre>
 					<aside class="notes" data-markdown>
-						Vue does provide a more generic way to observe and react to data changes on a Vue instance: **watch properties**. When we have some data that needs to change based on some other data, it is tempting to overuse `watch`.
+						**Vue** does provide a more generic way to observe and react to data changes on a **Vue** instance: **watch properties**. When we have some data that needs to change based on some other data, it is tempting to overuse `watch`.
 					</aside>
 				</section>
 				<section data-background-color="#ffffff">
@@ -527,7 +484,7 @@ data: { isActive: true, hasError: false }
 &lt;div v-bind:class="classObject"&gt; ... &lt;/div&gt;
 					</code></pre>
 					<aside class="notes" data-markdown>
-						A common need for data binding is manipulating an element’s class list and its inline styles. Since they are both attributes, we can use `v-bind` to handle them. For this reason, Vue provides special enhancements when `v-bind` is used with `class` and `style`. In addition to strings, the expressions can also evaluate to objects or arrays.
+						A common need for data binding is manipulating an element’s class list and its inline styles. For this reason, **Vue** provides special enhancements when `v-bind` is used with `class` and `style`.
 					</aside>
 				</section>
 				<section>
@@ -560,9 +517,9 @@ data: { activeColor: 'red', fontSize: 30 }
 &lt;h1 v-show='ok'&gt;Hello!&lt;/div&gt;
 				</code></pre>
 				<aside class="notes" data-markdown>
-					The directive `v-if` is used to conditionally render a block. It is also possible to add an “else block” with `v-else`. The `v-else-if` serves as an “else if block” for `v-if`. It can also be chained multiple times.
+					The directives `v-if`, `v-else` and `v-else-if` are used to conditionally render a block.
 
-					Another option for conditionally displaying an element is the `v-show` directive. An element with `v-show` will always be rendered and remain in the DOM; `v-show` only toggles the `display` CSS property of the element.
+					Another option for conditionally displaying an element is the `v-show` directive.
 				</aside>
 			</section>
 
@@ -636,10 +593,7 @@ const example2 = new Vue({
 				<aside class="notes" data-markdown>
 					We can use the `v-model` directive to create two-way data bindings on form input, textarea, and select elements.
 
-					`v-model` internally uses different properties and emits different events for different input elements:
-					- text and textarea elements use `value` property and `input` event;
-					- checkboxes and radiobuttons use `checked` property and `change` event;
-					- select fields use `value` as a prop and `change` as an event.
+					`v-model` internally uses different properties and emits different events for different input elements.
 				</aside>
 			</section>
 
@@ -648,6 +602,7 @@ const example2 = new Vue({
 				<pre class="code"><code class="lang-html">
 &lt;!-- the click event's propagation will be stopped --&gt;
 &lt;a @click.stop=&quot;doThis&quot;&gt;&lt;/a&gt;
+&lt;!-- also available .prevent, .capture, .self, .once, .passive, ... --&gt;
 
 &lt;!-- the submit event will no longer reload the page --&gt;
 &lt;form @submit.prevent=&quot;onSubmit&quot;&gt;&lt;/form&gt;
@@ -655,29 +610,11 @@ const example2 = new Vue({
 &lt;!-- modifiers can be chained --&gt;
 &lt;a @click.stop.prevent=&quot;doThat&quot;&gt;&lt;/a&gt;
 
-&lt;!-- also available .tab, .delete, .esc, .space, ...--&gt;
+&lt;!-- also available .tab, .delete, .esc, .space, ... --&gt;
 &lt;input @keyup.enter=&quot;submit&quot;&gt;
 				</code></pre>
 				<aside class="notes" data-markdown>
-					It is a very common need to call `event.preventDefault()` or `event.stopPropagation()` inside event handlers. To address this problem, Vue provides event modifiers for `v-on`. Some of event modifiers are:
-					+ .stop
-					+ .prevent
-					+ .capture
-					+ .self
-					+ .once
-					+ .passive
-
-					Vue allows adding key and mouse modifiers for `v-on` when listening for key and mouse events, such as:
-					+ .enter
-					+ .tab
-					+ .delete (captures both “Delete” and “Backspace” keys)
-					+ .esc
-					+ .space
-					+ .up
-					+ .down
-					+ .left
-					+ .right
-					+ .middle
+					It is a very common need to call `event.preventDefault()` or `event.stopPropagation()` inside event handlers. To address this problem, **Vue** provides event modifiers for `v-on`.
 				</aside>
 			</section>
 
@@ -690,7 +627,7 @@ const example2 = new Vue({
 				<h2>Dev tools</h2>
 				<img class="add" src="src/images/devtool.png" alt="vue devtools">
 				<aside class="notes" data-markdown>
-					For debugging in the browser there is a Vue-devtools, which allows us to see what components are in our application and their current status.
+					For debugging in the browser there is a **Vue**-devtools, which allows us to see what components are in our application and their current status.
 
 					It also works great with Vuex and allows us to perform so-called time-travel debugging: in the browser, we can see the status history and switch between them.
 				</aside>
@@ -707,11 +644,11 @@ const example2 = new Vue({
 					<li class="fragment">Conditional suspending of component rendering</li>
 				</ul>
 				<aside class="notes" data-markdown>
-					As Evan You summarized it, Vue 3 will be **faster**, **smaller**, **more maintainable** and it will be **easier to target native**.
+					As Evan You summarized it, **Vue** 3 will be **faster**, **smaller**, **more maintainable** and it will be **easier to target native**.
 
-					One of the most significant changes is that a new API that will allow for a function-based way of writing our component, inspired by React Hooks. It lets us encapsulate logic into "composition functions" and reuse that logic across components.
+					One of the most significant changes is that a new API that will allow for a function-based way of writing our component. It lets us encapsulate logic into "composition functions" and reuse that logic across components.
 
-					Other pretty exciting changes in Vue 3:
+					Other pretty exciting changes in **Vue** 3:
 					+ Virtual DOM rewrite for better performance and improved TypeScript support
 					+ Native portals – now called Teleport
 					+ Fragments (virtual elements that won't be rendered in the DOM tree)
